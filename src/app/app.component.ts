@@ -1,4 +1,4 @@
-import { Component ,VERSION} from "@angular/core";
+import { Component, VERSION } from "@angular/core";
 import { Location } from "@angular/common";
 
 @Component({
@@ -9,15 +9,17 @@ import { Location } from "@angular/common";
 export class AppComponent {
   name = "Angular ";
   ver = VERSION.full;
+  myMoney: number = 100000.653;
+  yourMoney: number = 5.3495;
   constructor(private _location: Location) {
     _location.go("/foo");
   }
 
-  backClicked() { 
+  backClicked() {
     this._location.back();
   }
 
-  forwardClicked() { 
+  forwardClicked() {
     this._location.back();
   }
 }
